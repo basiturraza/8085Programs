@@ -94,12 +94,13 @@
     font-weight: 16;
 }
 
-h1{
+.header{
     font-family: "KBCloudyDay";
     font-weight: 7;
     font-size: 150;
     /* color: ; */
     text-align: center;
+    text-shadow: black;
 }
 .caption
 {
@@ -107,4 +108,17 @@ h1{
     /* color: mediumturquoise; */
     font-weight: 15;
     text-align: center;
+    text-shadow: black;
+}
+.TbHead{
+    font-family: "pinkChicken";
+    font-weight: 9;
+    text-align: center;
+    text-shadow: black;
+}
+.TbCell{
+    font-family: "Instructions";
+    font-weight: 1;
+    text-align: center;
+    text-shadow: black;
 }
