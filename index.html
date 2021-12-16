@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="styleSheet" href="Font.css">
-    <link rel="styleSheet" href="style.css">
+<!--     <link rel="styleSheet" href="style.css"> -->
     <title>8085 Programs</title>
 </head>
 
 <body>
     <header>
-        <h1 align = "center">
+        <h1 align = "center" class = "header">
             All Programs of 8085 Assembly Language
         </h1>
     </header>
@@ -23,140 +23,140 @@
                 To find out 2's complement of five numbers stored from memory location 6000H onwards. Stor the result
                 from memory location 6100H. (Before execution store 11H, 22H, 33H, 44H, 55H from 6000H to 6004H)
             </caption>
-            <tr>
+            <tr class="TbHead">
                 <th>Address</th>
                 <th>Label</th>
                 <th>MeneMonic</th>
                 <th>OpCode</th>
                 <th>Comment</th>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2000</td>
                 <td>start</td>
                 <td>LXI 6000</td>
                 <td>21</td>
                 <td>initialize HL pointer with 6000H </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2001</td>
                 <td> </td>
                 <td> </td>
                 <td>00</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2002</td>
                 <td> </td>
                 <td> </td>
                 <td>60</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2003</td>
                 <td> </td>
                 <td>LXI D 6100H</td>
                 <td>11</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2004</td>
                 <td> </td>
                 <td> </td>
                 <td>00</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2005</td>
                 <td> </td>
                 <td> </td>
                 <td>61</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2006</td>
                 <td> </td>
                 <td>MVI C,05</td>
                 <td>0E</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2007</td>
                 <td> </td>
                 <td> </td>
                 <td>05</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2008</td>
                 <td>Loop</td>
                 <td>MOV A, M</td>
                 <td>7E</td>
                 <td>Get the Number in accumulator</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2009</td>
                 <td> </td>
                 <td>CMA</td>
                 <td>2F</td>
                 <td>1's complement the accumulator</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>200A</td>
                 <td> </td>
                 <td>INX A</td>
                 <td>3C</td>
                 <td>2's complement the accumulator</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>200B</td>
                 <td> </td>
                 <td>STAX D</td>
                 <td>12</td>
                 <td>Store the 2's complement at address pointed by DE pair</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>200C</td>
                 <td> </td>
                 <td>INX H</td>
                 <td>23</td>
                 <td>Increment in HL pointer</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>200D</td>
                 <td> </td>
                 <td>INX D</td>
                 <td>13</td>
                 <td>Increment in DE pointer</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>200E</td>
                 <td> </td>
                 <td>DCR C</td>
                 <td>0D</td>
                 <td>Decrement Counter register C</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>200F</td>
                 <td> </td>
                 <td>JNZ Loop</td>
                 <td>C2</td>
                 <td>is counter 0? No jump to label Loop</td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2010</td>
                 <td> </td>
                 <td> </td>
                 <td>08</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2011</td>
                 <td> </td>
                 <td> </td>
                 <td>20</td>
                 <td> </td>
             </tr>
-            <tr>
+            <tr class = "TbCell">
                 <td>2012</td>
                 <td>Stop</td>
                 <td>HLT</td>
