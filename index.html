@@ -5,168 +5,1223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styleSheet" href="Font.css">
-<!--     <link rel="styleSheet" href="style.css"> -->
-    <title>8085 Programs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="footer.css">
+
 </head>
 
 <body>
-    <header>
-        <h1 align = "center" class = "header">
-            All Programs of 8085 Assembly Language
-        </h1>
-    </header>
-    
-    <section>
-        <h5>Program Number One</h5>
-        <table border="1" cellSpacing="2" cellPadding="2" align = "center">
-            <caption class="caption">
-                To find out 2's complement of five numbers stored from memory location 6000H onwards. Stor the result
-                from memory location 6100H. (Before execution store 11H, 22H, 33H, 44H, 55H from 6000H to 6004H)
-            </caption>
-            <tr class="TbHead">
-                <th>Address</th>
-                <th>Label</th>
-                <th>MeneMonic</th>
-                <th>OpCode</th>
-                <th>Comment</th>
-            </tr>
-            <tr class = "TbCell">
-                <td>2000</td>
-                <td>start</td>
-                <td>LXI 6000</td>
-                <td>21</td>
-                <td>initialize HL pointer with 6000H </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2001</td>
-                <td> </td>
-                <td> </td>
-                <td>00</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2002</td>
-                <td> </td>
-                <td> </td>
-                <td>60</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2003</td>
-                <td> </td>
-                <td>LXI D 6100H</td>
-                <td>11</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2004</td>
-                <td> </td>
-                <td> </td>
-                <td>00</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2005</td>
-                <td> </td>
-                <td> </td>
-                <td>61</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2006</td>
-                <td> </td>
-                <td>MVI C,05</td>
-                <td>0E</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2007</td>
-                <td> </td>
-                <td> </td>
-                <td>05</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2008</td>
-                <td>Loop</td>
-                <td>MOV A, M</td>
-                <td>7E</td>
-                <td>Get the Number in accumulator</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2009</td>
-                <td> </td>
-                <td>CMA</td>
-                <td>2F</td>
-                <td>1's complement the accumulator</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>200A</td>
-                <td> </td>
-                <td>INX A</td>
-                <td>3C</td>
-                <td>2's complement the accumulator</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>200B</td>
-                <td> </td>
-                <td>STAX D</td>
-                <td>12</td>
-                <td>Store the 2's complement at address pointed by DE pair</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>200C</td>
-                <td> </td>
-                <td>INX H</td>
-                <td>23</td>
-                <td>Increment in HL pointer</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>200D</td>
-                <td> </td>
-                <td>INX D</td>
-                <td>13</td>
-                <td>Increment in DE pointer</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>200E</td>
-                <td> </td>
-                <td>DCR C</td>
-                <td>0D</td>
-                <td>Decrement Counter register C</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>200F</td>
-                <td> </td>
-                <td>JNZ Loop</td>
-                <td>C2</td>
-                <td>is counter 0? No jump to label Loop</td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2010</td>
-                <td> </td>
-                <td> </td>
-                <td>08</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2011</td>
-                <td> </td>
-                <td> </td>
-                <td>20</td>
-                <td> </td>
-            </tr>
-            <tr class = "TbCell">
-                <td>2012</td>
-                <td>Stop</td>
-                <td>HLT</td>
-                <td>76</td>
-                <td>Stop Processing</td>
-            </tr>
-        </table>
-    </section>
-    <footer>No &copy; Copyrights GNU public license</footer>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Clients</a>
+        <a href="#">Services</a>
+        <a href="#">Programs</a>
+        <a href="#">Tools</a>
+        <a href="#">Contact</a>
+        <a href="#">Github</a>
+        <a href="./bit.html">Bit-Byte</a>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <br>
+        <div style="font-size: 30px; text-align: center;">What is 8085 Microprocessor?</div>
+        <div>
+            8085 is an 8-bit microprocessor as it operates on 8 bits at a time and is created with N-MOS technology.
+            This microprocessor exhibits some unique characteristics and this is the reason it still holds popularity
+            among the microprocessors.
+            Basically, 8085 was the first commercially successful microprocessor by Intel. As some of the architectural
+            drawbacks associated with 8080 was also eliminated by 8085.
+            The size of the data bus of 8085 is 8 bits while that of the address bus is 16. Therefore, can address 64 KB
+            memory. Also, as it can perform 8-bit operation thus the size of ALU is also 8-bit.
+            It also provides operational advantages, as 8085 needs a single +5V supply with only one clock single of
+            width 320 ns. While 8080 requires 3 power supply lines and 2 clock signals of 500 ns.
+        </div>
+        <div style="font-size: 30px; text-align: center;">What is 8085 Microprocessor Flags?</div>
+        <div>In 8085 microprocessor, the flags register can have a total of eight flags. Thus a flag can be represented
+            by 1 bit of information. But only five flags are implemented in 8085. And they are
+            Carry flag (Cy)
+            <ol>
+                <li>Auxiliary carry flag (AC),</li>
+                <li>Sign flag (S),</li>
+                <li>Parity flag (P),</li>
+                <li>Zero flag (Z).</li>
+            </ol>
+            <div>
+                The respective position of these flag bits in flag register has been show the below figure. The
+                positions marked by “x” are to be considered as don't care bits in the flags register. The user is not
+                required to memorize the positions of these flags in the flags register.
+                <!-- <img> -->
+            </div>
+            <br>
+            <div>
+                <strong>Carry flag (Cy):</strong> after performing the addition of any two 8-bit numbers, the carry
+                generated can be
+                either 0 or 1. That is only 1-bit. Thus to store the carry information 1-bit storage is enough. The Cy
+                flag is stored in the LS bit position in the flags register. Instructions that use the Cy flag are
+                widely used in the user programs.
+                <br>
+                <br>
+                <strong> carry flag (Ac):</strong> Now let us consider the addition of any two 8-bit (2-hex digit)
+                numbers, a
+                carry may be generated when we add the LS hex digits of the two numbers. Such a carry is called
+                intermediate carry also known as half carry, or auxiliary carry (AC). Intel prefers to call it AC. In
+                the above Example 1, AC was not generated but in Example 2, AC is generated.
+                <br>
+                As this is only an intermediate carry, we may not be interested in storing this bit information. But
+                8085 microprocessor still stores this AC information in bit position 4 of the flags register. The result
+                of execution of DAA instruction, is affected by the status of this flag. However, in our 8085
+                instruction set does not provide any instruction, which explicitly uses the AC flag.
+                <br>
+                <br>
+                <strong>Sign flag (S):</strong> The S flag is set to 1, when the result thus produced against any
+                logical or arithmetic
+                operations is negative, indicated by MS bit of 8-bit result being 1. It is reset to 0 otherwise if the
+                result is positive, indicated by MS bit of 8-bit result being 0.
+                <br>
+                Thus, the value of S flag is essentially the value of the MS bit of the 8-bit result. In the above
+                Example 1, as the 8-bit result is 38H = 0 011 1000, 0 in MSB indicates result is positive and the sign
+                flag is reset to 0. Note that we are not considering here the 9-bit result including the carry, to
+                decide the S flag value. In Example 2, as the 8-bit result is A3H = 1 010 0011, the MSB has become 1
+                that means negative and the sign flag is set to 1.
+                <br>
+                But when we shall work with unsigned numbers, then we shall simply ignore the S flag. For example, if we
+                are treating 85H and 1EH as unsigned numbers, their sum will be the unsigned number A3H. In this case, S
+                flag becomes 1, but we do not care for the value of the S flag. And we shall ignore it as well.
+                <br>
+                <br>
+                <strong>Parity flag (P):</strong> The P flag is set to 1, if the 8-bit result thus produced against any
+                logical and
+                arithmetic operation has an even number of 1's in it. If there are odd number of 1's in the 8-bit
+                result, the P flag is reset to 0.
+                <br>
+                In our previous Example 1, as the 8-bit result 38H = 0011 1000 has three numbers of 1's, so having odd
+                number of 1’s, the parity flag is reset to 0. On the other hand, in Example 2, as the 8-bit result A3H =
+                1010 0011 has four numbers of 1's (so an even number of 1’s), the parity flag is set to 1.
+                <br>
+                As the user does not really care for the number of 1's present in the result after an arithmetic
+                operation, this flag is not of much use practically.
+                <br>
+                <br>
+                <strong>Zero flag (Z):</strong> The Z flag is set to 1, if after arithmetic and logical operations, the
+                8-bit result thus
+                produced, is 00H. If the 8-bit result is not equal to 00H, the Z flag is reset to 0. Thus the Z flag is
+                hoisted to indicate that the result is 0.
+            </div>
+        </div>
+        <div style="font-size: 30px; text-align: center;">What is Assembly Programming Instruction?</div>
+        <div>
+            <span style="font-size: 20px;"> Microprocessor - 8085 Control Instructions</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="text-align:center;">Opcode</th>
+                        <th style="text-align:center;">Operand</th>
+                        <th style="text-align:center;">Meaning</th>
+                        <th style="text-align:center;">Explanation</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">NOP</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>No operation</td>
+                        <td>No operation is performed, i.e., the instruction is fetched and decoded.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">HLT</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Halt and enter wait state</td>
+                        <td>The CPU finishes executing the current instruction and stops further execution. An interrupt
+                            or reset is
+                            necessary to exit from the halt state.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">DI</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Disable interrupts</td>
+                        <td>The interrupt enable flip-flop is reset and all the interrupts are disabled except TRAP.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">EI</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Enable interrupts</td>
+                        <td>The interrupt enable flip-flop is set and all the interrupts are enabled.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">RIM</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Read interrupt mask</td>
+                        <td>This instruction is used to read the status of interrupts 7.5, 6.5, 5.5 and read serial data
+                            input bit.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">SIM</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Set interrupt mask</td>
+                        <td style="vertical-align:middle;">This instruction is used to implement the interrupts 7.5,
+                            6.5, 5.5, and
+                            serial data output.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+            <br>
+            <span style="font-size: 20px;">Microprocessor - 8085 Logical Instructions</span>
+
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th style="text-align:center;">Opcode</th>
+                        <th style="text-align:center;width:15%">Operand</th>
+                        <th style="text-align:center;">Meaning</th>
+                        <th style="text-align:center;">Explanation</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">CMP</td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">Compare the register or memory with the accumulator</td>
+                        <td style="vertical-align:middle;">The contents of the operand (register or memory) are M
+                            compared with the
+                            contents of the accumulator.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">CPI</td>
+                        <td style="text-align:center;vertical-align:middle;">8-bit data</td>
+                        <td style="vertical-align:middle;">Compare immediate with the accumulator</td>
+                        <td style="vertical-align:middle;">The second byte data is compared with the contents of the
+                            accumulator.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">ANA</td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">Logical AND register or memory with the accumulator</td>
+                        <td style="vertical-align:middle;">The contents of the accumulator are logically AND with M the
+                            contents of
+                            the register or memory, and the result is placed in the accumulator.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">ANI</td>
+                        <td style="text-align:center;vertical-align:middle;">8-bit data</td>
+                        <td style="vertical-align:middle;">Logical AND immediate with the accumulator</td>
+                        <td style="vertical-align:middle;">The contents of the accumulator are logically AND with the
+                            8-bit data and
+                            the result is placed in the accumulator.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">XRA</td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">Exclusive OR register or memory with the accumulator</td>
+                        <td style="vertical-align:middle;">The contents of the accumulator are Exclusive OR with M the
+                            contents of
+                            the register or memory, and the result is placed in the accumulator.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">XRI</td>
+                        <td style="text-align:center;vertical-align:middle;">8-bit data</td>
+                        <td style="vertical-align:middle;">Exclusive OR immediate with the accumulator</td>
+                        <td style="vertical-align:middle;">The contents of the accumulator are Exclusive OR with the
+                            8-bit data and
+                            the result is placed in the accumulator.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">ORA</td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">Logical OR register or memory with the accumulator</td>
+                        <td style="vertical-align:middle;">The contents of the accumulator are logically OR with M the
+                            contents of
+                            the register or memory, and result is placed in the accumulator.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">ORI</td>
+                        <td style="text-align:center;vertical-align:middle;">8-bit data</td>
+                        <td style="vertical-align:middle;">Logical OR immediate with the accumulator</td>
+                        <td style="vertical-align:middle;">The contents of the accumulator are logically OR with the
+                            8-bit data and
+                            the result is placed in the accumulator.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">RLC</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td style="vertical-align:middle;">Rotate the accumulator left</td>
+                        <td style="vertical-align:middle;">Each binary bit of the accumulator is rotated left by one
+                            position. Bit
+                            D7 is placed in the position of D0 as well as in the Carry flag. CY is modified according to
+                            bit D7.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">RRC</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td style="vertical-align:middle;">Rotate the accumulator right</td>
+                        <td style="vertical-align:middle;">Each binary bit of the accumulator is rotated right by one
+                            position. Bit
+                            D0 is placed in the position of D7 as well as in the Carry flag. CY is modified according to
+                            bit D0.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">RAL</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td style="vertical-align:middle;">Rotate the accumulator left through carry</td>
+                        <td style="vertical-align:middle;">Each binary bit of the accumulator is rotated left by one
+                            position
+                            through the Carry flag. Bit D7 is placed in the Carry flag, and the Carry flag is placed in
+                            the least
+                            significant position D0. CY is modified according to bit D7.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">RAR</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td style="vertical-align:middle;">Rotate the accumulator right through carry</td>
+                        <td style="vertical-align:middle;">Each binary bit of the accumulator is rotated right by one
+                            position
+                            through the Carry flag. Bit D0 is placed in the Carry flag, and the Carry flag is placed in
+                            the most
+                            significant position D7. CY is modified according to bit D0.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">CMA</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Complement accumulator</td>
+                        <td>The contents of the accumulator are complemented. No flags are affected.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">CMC</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Complement carry</td>
+                        <td>The Carry flag is complemented. No other flags are affected.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">STC</td>
+                        <td style="text-align:center;vertical-align:middle;">None</td>
+                        <td>Set Carry</td>
+                        <td>Set Carry</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+            <span style="font-size: 20px;">Microprocessor - 8085 Branching Instructions</span>
+
+            <table class="table table-bordered" style="font-size:92%">
+                <tbody>
+                    <tr>
+                        <th style="text-align:center;">Opcode</th>
+                        <th style="text-align:center;width:15%">Operand</th>
+                        <th style="text-align:center;">Meaning</th>
+                        <th style="text-align:center;">Explanation</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;"><b>JMP</b></td>
+                        <td style="text-align:center;vertical-align:middle;"><b>16-bit address</b></td>
+                        <td style="vertical-align:middle;">Jump unconditionally</td>
+                        <td>The program sequence is transferred to the memory address given in the operand.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Opcode</td>
+                                        <td>Description</td>
+                                        <td>Flag Status</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JC</td>
+                                        <td>Jump on Carry</td>
+                                        <td style="vertical-align:middle;">CY=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JNC</td>
+                                        <td>Jump on no Carry</td>
+                                        <td style="vertical-align:middle;">CY=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JP</td>
+                                        <td>Jump on positive</td>
+                                        <td style="vertical-align:middle;">S=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JM</td>
+                                        <td>Jump on minus</td>
+                                        <td style="vertical-align:middle;">S=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JZ</td>
+                                        <td>Jump on zero</td>
+                                        <td style="vertical-align:middle;">Z=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JNZ</td>
+                                        <td>Jump on no zero</td>
+                                        <td style="vertical-align:middle;">Z=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JPE</td>
+                                        <td>Jump on parity even</td>
+                                        <td style="vertical-align:middle;">P=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">JPO</td>
+                                        <td>Jump on parity odd</td>
+                                        <td style="vertical-align:middle;">P=0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"><b>16-bit address</b></td>
+                        <td style="vertical-align:middle;">Jump conditionally</td>
+                        <td style="vertical-align:middle;">The program sequence is transferred to the memory address
+                            given in the
+                            operand based on the specified flag of the PSW.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Opcode</td>
+                                        <td>Description</td>
+                                        <td>Flag Status </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CC</td>
+                                        <td>Call on Carry</td>
+                                        <td style="vertical-align:middle;">CY=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CNC</td>
+                                        <td>Call on no Carry</td>
+                                        <td style="vertical-align:middle;">CY=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CP</td>
+                                        <td>Call on positive</td>
+                                        <td style="vertical-align:middle;">S=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CM</td>
+                                        <td>Call on minus</td>
+                                        <td style="vertical-align:middle;">S=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CZ</td>
+                                        <td>Call on zero</td>
+                                        <td style="vertical-align:middle;">Z=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CNZ</td>
+                                        <td>Call on no zero</td>
+                                        <td style="vertical-align:middle;">Z=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CPE</td>
+                                        <td>Call on parity even</td>
+                                        <td style="vertical-align:middle;">P=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">CPO</td>
+                                        <td>Call on parity odd</td>
+                                        <td style="vertical-align:middle;">P=0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"><b>16-bit address</b></td>
+                        <td style="vertical-align:middle;">Unconditional subroutine call</td>
+                        <td style="vertical-align:middle;">The program sequence is transferred to the memory address
+                            given in the
+                            operand. Before transferring, the address of the next instruction after CALL is pushed onto
+                            the stack.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;"><b>RET</b></td>
+                        <td style="text-align:center;vertical-align:middle;"><b>None</b></td>
+                        <td style="vertical-align:middle;">Return from subroutine unconditionally</td>
+                        <td>The program sequence is transferred from the subroutine to the calling program.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Opcode</td>
+                                        <td>Description</td>
+                                        <td>Flag Status </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RC</td>
+                                        <td>Return on Carry</td>
+                                        <td style="vertical-align:middle;">CY=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RNC</td>
+                                        <td>Return on no Carry</td>
+                                        <td style="vertical-align:middle;">CY=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RP</td>
+                                        <td>Return on positive</td>
+                                        <td style="vertical-align:middle;">S=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RM</td>
+                                        <td>Return on minus</td>
+                                        <td style="vertical-align:middle;">S=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RZ</td>
+                                        <td>Return on zero</td>
+                                        <td style="vertical-align:middle;">Z=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RNZ</td>
+                                        <td>Return on no zero</td>
+                                        <td style="vertical-align:middle;">Z=0</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RPE</td>
+                                        <td>Return on parity even</td>
+                                        <td style="vertical-align:middle;">P=1</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;vertical-align:middle;">RPO</td>
+                                        <td>Return on parity odd</td>
+                                        <td style="vertical-align:middle;">P=0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;"><b>None</b></td>
+                        <td style="vertical-align:middle;">Return from subroutine conditionally</td>
+                        <td style="vertical-align:middle;">The program sequence is transferred from the subroutine to
+                            the calling
+                            program based on the specified flag of the PSW and the program execution begins at the new
+                            address.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;"><b>PCHL</b></td>
+                        <td style="text-align:center;vertical-align:middle;"><b>None</b></td>
+                        <td style="vertical-align:middle;">Load the program counter with HL contents</td>
+                        <td>The contents of registers H &amp; L are copied into the program counter. The contents of H
+                            are placed as
+                            the high-order byte and the contents of L as the loworder byte.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;"><b>RST</b></td>
+                        <td style="text-align:center;vertical-align:middle;"><b>0-7</b></td>
+                        <td style="vertical-align:middle;">Restart</td>
+                        <td>The RST instruction is used as software instructions in a program to transfer the program
+                            execution to
+                            one of the following eight locations.
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Instruction</td>
+                                        <td>Restart Address</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 0</td>
+                                        <td>0000H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 1</td>
+                                        <td>0008H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 2</td>
+                                        <td>0010H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 3</td>
+                                        <td>0018H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 4</td>
+                                        <td>0020H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 5</td>
+                                        <td>0028H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 6</td>
+                                        <td>0030H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 7</td>
+                                        <td>0038H</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            The 8085 has additionally 4 interrupts, which can generate RST instructions internally and
+                            doesn’t
+                            require any external hardware. Following are those instructions and their Restart addresses
+                            −
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Interrupt</td>
+                                        <td>Restart Address</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRAP</td>
+                                        <td>0024H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 5.5</td>
+                                        <td>002CH</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 6.5</td>
+                                        <td>0034H</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RST 7.5</td>
+                                        <td>003CH</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+            <span style="font-size: 20px;">8085 Arithmetic Instructions</span>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th style="text-align:center;vertical-align:middle;">Opcode</th>
+                        <th style="text-align:center;vertical-align:middle;width:18%;">Operand</th>
+                        <th style="text-align:center;vertical-align:middle;">Meaning</th>
+                        <th style="text-align:center;vertical-align:middle;">Explanation</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">ADD</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Add register or memory, to the accumulator</p>
+                        </td>
+                        <td>
+                            <p>The contents of the register or memory are added to the contents of the accumulator and
+                                the result is
+                                stored in the accumulator.</p>
+                            <p><b>Example</b> − ADD K.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">ADC</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Add register to the accumulator with carry</p>
+                        </td>
+                        <td>
+                            <p>The contents of the register or memory &amp; M the Carry flag are added to the contents
+                                of the
+                                accumulator and the result is stored in the accumulator.</p>
+                            <p><b>Example</b> − ADC K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">ADI</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">8-bit data</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Add the immediate to the accumulator</p>
+                        </td>
+                        <td>
+                            <p>The 8-bit data is added to the contents of the accumulator and the result is stored in
+                                the
+                                accumulator.</p>
+                            <p><b>Example</b> − ADI 55K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">ACI</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">8-bit data</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Add the immediate to the accumulator with carry</p>
+                        </td>
+                        <td>
+                            <p>The 8-bit data and the Carry flag are added to the contents of the accumulator and the
+                                result is
+                                stored in the accumulator.</p>
+                            <p><b>Example</b> − ACI 55K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">LXI</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">Reg. pair, 16bit data</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Load the register pair immediate</p>
+                        </td>
+                        <td>
+                            <p>The instruction stores 16-bit data into the register pair designated in the operand.</p>
+                            <p><b>Example</b> − LXI K, 3025M</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">DAD</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">Reg. pair</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Add the register pair to H and L registers</p>
+                        </td>
+                        <td>
+                            <p>The 16-bit data of the specified register pair are added to the contents of the HL
+                                register.</p>
+                            <p><b>Example</b> − DAD K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">SUB</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Subtract the register or the memory from the accumulator</p>
+                        </td>
+                        <td>
+                            <p>The contents of the register or the memory are subtracted from the contents of the
+                                accumulator, and
+                                the result is stored in the accumulator.</p>
+                            <p><b>Example</b> − SUB K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">SBB</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Subtract the source and borrow from the accumulator</p>
+                        </td>
+                        <td>
+                            <p>The contents of the register or the memory &amp; M the Borrow flag are subtracted from
+                                the contents
+                                of the accumulator and the result is placed in the accumulator.</p>
+                            <p><b>Example</b> − SBB K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">SUI</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">8-bit data</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Subtract the immediate from the accumulator</p>
+                        </td>
+                        <td>
+                            <p>The 8-bit data is subtracted from the contents of the accumulator &amp; the result is
+                                stored in the
+                                accumulator.</p>
+                            <p><b>Example</b> − SUI 55K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">XCHG</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">None</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Exchange H and L with D and E</p>
+                        </td>
+                        <td>
+                            <p>The contents of register H are exchanged with the contents of register D, and the
+                                contents of
+                                register L are exchanged with the contents of register E.</p>
+                            <p><b>Example</b> − XCHG</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">INR</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Increment the register or the memory by 1</p>
+                        </td>
+                        <td>
+                            <p>The contents of the designated register or the memory are incremented by 1 and their
+                                result is stored
+                                at the same place.</p>
+                            <p><b>Example</b> − INR K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">INX</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Increment register pair by 1</p>
+                        </td>
+                        <td>
+                            <p>The contents of the designated register pair are incremented by 1 and their result is
+                                stored at the
+                                same place.</p>
+                            <p><b>Example</b> − INX K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">DCR</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                            <p style="text-align:center;vertical-align:middle;">M</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Decrement the register or the memory by 1</p>
+                        </td>
+                        <td>
+                            <p>The contents of the designated register or memory are decremented by 1 and their result
+                                is stored at
+                                the same place.</p>
+                            <p><b>Example</b> − DCR K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">DCX</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">R</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Decrement the register pair by 1</p>
+                        </td>
+                        <td>
+                            <p>The contents of the designated register pair are decremented by 1 and their result is
+                                stored at the
+                                same place.</p>
+                            <p><b>Example</b> − DCX K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">DAA</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">None</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Decimal adjust accumulator</p>
+                        </td>
+                        <td>
+                            <p>The contents of the accumulator are changed from a binary value to two 4-bit BCD digits.
+                            </p>
+                            <p>If the value of the low-order 4-bits in the accumulator is greater than 9 or if AC flag
+                                is set, the
+                                instruction adds 6 to the low-order four bits.</p>
+                            <p>If the value of the high-order 4-bits in the accumulator is greater than 9 or if the
+                                Carry flag is
+                                set, the instruction adds 6 to the high-order four bits.</p>
+                            <p><b>Example</b> − DAA</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+            <span style="font-size: 20px;">8085 Data-transfer Instructions</span>
+
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th style="text-align:center;vertical-align:middle;">Opcode</th>
+                        <th style="text-align:center;vertical-align:middle;width:25%">Operand</th>
+                        <th style="text-align:center;vertical-align:middle;">Meaning</th>
+                        <th style="text-align:center;vertical-align:middle;">Explanation</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">MOV</td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">Rd, Sc</p>
+                            <p style="text-align:center;vertical-align:middle;"></p>
+                            <p style="text-align:center;vertical-align:middle;">M, Sc</p>
+                            <p></p>
+                            <p style="text-align:center;vertical-align:middle;"></p>
+                            <p style="text-align:center;vertical-align:middle;">Dt, M</p>
+                            <p></p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>Copy from the source (Sc) to the destination(Dt)</p>
+                        </td>
+                        <td>
+                            <p>This instruction copies the contents of the source register into the destination register
+                                without any
+                                alteration.</p>
+                            <p><b>Example</b> − MOV K, L</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">MVI</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">Rd, data</p>
+                            <p style="text-align:center;vertical-align:middle;">M, data</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Move immediate 8-bit</p>
+                        </td>
+                        <td>
+                            <p>The 8-bit data is stored in the destination register or memory.</p>
+                            <p><b>Example</b> − MVI K, 55L</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">LDA</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">16-bit address</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Load the accumulator</p>
+                        </td>
+                        <td>
+                            <p>The contents of a memory location, specified by a 16-bit address in the operand, are
+                                copied to the
+                                accumulator.</p>
+                            <p><b>Example</b> − LDA 2034K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">LDAX</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">B/D Reg. pair</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Load the accumulator indirect</p>
+                        </td>
+                        <td>
+                            <p>The contents of the designated register pair point to a memory location. This instruction
+                                copies the
+                                contents of that memory location into the accumulator.</p>
+                            <p><b>Example</b> − LDAX K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">LXI</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">Reg. pair, 16-bit data</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Load the register pair immediate</p>
+                        </td>
+                        <td>
+                            <p>The instruction loads 16-bit data in the register pair designated in the register or the
+                                memory.</p>
+                            <p><b>Example</b> − LXI K, 3225L</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">LHLD</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">16-bit address</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Load H and L registers direct</p>
+                        </td>
+                        <td>
+                            <p>The instruction copies the contents of the memory location pointed out by the address
+                                into register L
+                                and copies the contents of the next memory location into register H.</p>
+                            <p><b>Example</b> − LHLD 3225K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">STA</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">16-bit address</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">16-bit address</p>
+                        </td>
+                        <td>
+                            <p>The contents of the accumulator are copied into the memory location specified by the
+                                operand.</p>
+                            <p>This is a 3-byte instruction, the second byte specifies the low-order address and the
+                                third byte
+                                specifies the high-order address.</p>
+                            <p><b>Example</b> − STA 325K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">STAX</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">16-bit address</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Store the accumulator indirect</p>
+                        </td>
+                        <td>
+                            <p>The contents of the accumulator are copied into the memory location specified by the
+                                contents of the
+                                operand.</p>
+                            <p><b>Example</b> − STAX K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">SHLD</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">16-bit address</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;"></p>Store H and L registers direct
+                        </td>
+                        <td>
+                            <p>The contents of register L are stored in the memory location specified by the 16-bit
+                                address in the
+                                operand and the contents of H register are stored into the next memory location by
+                                incrementing the
+                                operand.</p>
+                            <p>This is a 3-byte instruction, the second byte specifies the low-order address and the
+                                third byte
+                                specifies the high-order address.</p>
+                            <p><b>Example</b> − SHLD 3225K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">XCHG</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">None</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Exchange H and L with D and E</p>
+                        </td>
+                        <td>
+                            <p>The contents of register H are exchanged with the contents of register D, and the
+                                contents of
+                                register L are exchanged with the contents of register E.</p>
+                            <p><b>Example</b> − XCHG</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">SPHL</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">None</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Copy H and L registers to the stack pointer</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p>The instruction loads the contents of the H and L registers into the stack pointer
+                                register. The
+                                contents of the H register provide the high-order address and the contents of the L
+                                register provide
+                                the low-order address.</p>
+                            <p><b>Example</b> − SPHL</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">XTHL</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">None</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Exchange H and L with top of stack</p>
+                        </td>
+                        <td>
+                            <p>The contents of the L register are exchanged with the stack location pointed out by the
+                                contents of
+                                the stack pointer register.</p>
+                            <p>The contents of the H register are exchanged with the next stack location (SP+1).</p>
+                            <p><b>Example</b> − XTHL</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">PUSH</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">Reg. pair</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Push the register pair onto the stack</p>
+                        </td>
+                        <td>
+                            <p>The contents of the register pair designated in the operand are copied onto the stack in
+                                the
+                                following sequence.</p>
+                            <p>The stack pointer register is decremented and the contents of the high order register (B,
+                                D, H, A)
+                                are copied into that location.</p>
+                            <p>The stack pointer register is decremented again and the contents of the low-order
+                                register (C, E, L,
+                                flags) are copied to that location.</p>
+                            <p><b>Example</b> − PUSH K</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">POP</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">Reg. pair</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Pop off stack to the register pair</p>
+                        </td>
+                        <td>
+                            <p>The contents of the memory location pointed out by the stack pointer register are copied
+                                to the
+                                low-order register (C, E, L, status flags) of the operand.</p>
+                            <p>The stack pointer is incremented by 1 and the contents of that memory location are copied
+                                to the
+                                high-order register (B, D, H, A) of the operand.</p>
+                            <p>The stack pointer register is again incremented by 1.</p>
+                            <p><b>Example</b> − POPK</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">OUT</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">8-bit port address</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Output the data from the accumulator to a port with 8bit
+                                address</p>
+                        </td>
+                        <td>
+                            <p>The contents of the accumulator are copied into the I/O port specified by the operand.
+                            </p>
+                            <p><b>Example</b> − OUT K9L</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">IN</p>
+                        </td>
+                        <td style="text-align:center;vertical-align:middle;">
+                            <p style="text-align:center;vertical-align:middle;">8-bit port address</p>
+                        </td>
+                        <td style="vertical-align:middle;">
+                            <p style="vertical-align:middle;">Input data to accumulator from a port with 8-bit address
+                            </p>
+                        </td>
+                        <td>
+                            <p>The contents of the input port designated in the operand are read and loaded into the
+                                accumulator.
+                            </p>
+                            <p><b>Example</b> − IN5KL</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="avatar" data-tooltip="Thinking Cat"></div> -->
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header").style.fontSize = "30px";
+            } else {
+                document.getElementById("header").style.fontSize = "60px";
+            }
+        }
+    </script>
 
 </body>
 
