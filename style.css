@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "bit";
+    src: url(res/fonts/bitwise/bitwise.ttf);
+}
+
+@font-face {
+    font-family: "int";
+    src: url(res/fonts/instruction/Instruction.otf);
+}
+
+@font-face {
+    font-family: "kbc";
+    src: url(res/fonts/kbcloudyday/KBCloudyDay.ttf);
+}
+
+@font-face {
+    font-family: "mak";
+    src: url(res/fonts/makisupa/MAKISUPA.TTF);
+}
+
+@font-face {
+    font-family: "pink";
+    src: url(res/fonts/pink_chicken/PinkChicken-Regular.ttf);
+}
+
+@font-face {
+    font-family: "sml";
+    src: url(res/fonts/smile_candy/Smile\ Candy.ttf);
+}
+
+@font-face {
+    font-family: "typ";
+    src: url(res/fonts/typori/Typori-Regular.ttf);
+}
+
+@font-face {
+    font-family: "unis";
+    src: url(res/fonts/unispace/unispace\ rg.ttf);
+}
+
+@font-face {
+    font-family: "vor";
+    src: url(res/fonts/vorname/Vorname.ttf);
+}
+
+@font-face {
+    font-family: "aus";
+    src: url(res/fonts/austhatic_script/Austhatic\ Script.ttf);
+}
+
+
+body {
+    font-family: "sml";
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    font-family: "pink";
+    transition: margin-left .5s;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+#header {
+    font-family: "unis", monospace;
+    background-color: #f1f1f1;
+    padding: 25px 10px;
+    color: black;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.2s ease;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* background-image: url('https://source.unsplash.com/nKC772R_qog'); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.avatar::before,
+.avatar::after {
+    --scale: 0;
+    --arrow-size: 10px;
+    --tooltip-color: #333;
+
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.avatar::before {
+    --translate-y: calc(-100% - var(--arrow-size));
+
+    content: attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    background: var(--tooltip-color);
+}
+
+.avatar:hover::before,
+.avatar:hover::after {
+    --scale: 1;
+}
+
+.avatar::after {
+    --translate-y: calc(-1 * var(--arrow-size));
+
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: var(--tooltip-color);
+    transform-origin: top center;
+}
+
+
+table, td, th {
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 15px;
+    background-color: #04AA6D;
+    color: white
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+
+tr:hover {
+    background-color: rgb(23, 230, 219);
+}
+
+tr:nth-child(even) {
+    background-color: #30a5b4;
+}
+
+tr:nth-child(odd) {
+    background-color: #6ae1ff;
+}

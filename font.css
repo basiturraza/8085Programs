@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "bit";
+    src: url(res/fonts/bitwise/bitwise.ttf);
+}
+
+@font-face {
+    font-family: "int";
+    src: url(res/fonts/instruction/Instruction.otf);
+}
+
+@font-face {
+    font-family: "kbc";
+    src: url(res/fonts/kbcloudyday/KBCloudyDay.ttf);
+}
+
+@font-face {
+    font-family: "mak";
+    src: url(res/fonts/makisupa/MAKISUPA.TTF);
+}
+
+@font-face {
+    font-family: "pink";
+    src: url(res/fonts/pink_chicken/PinkChicken-Regular.ttf);
+}
+
+@font-face {
+    font-family: "sml";
+    src: url(res/fonts/smile_candy/Smile\ Candy.ttf);
+}
+
+@font-face {
+    font-family: "typ";
+    src: url(res/fonts/typori/Typori-Regular.ttf);
+}
+
+@font-face {
+    font-family: "unis";
+    src: url(res/fonts/unispace/unispace\ rg.ttf);
+}
+
+@font-face {
+    font-family: "vor";
+    src: url(res/fonts/vorname/Vorname.ttf);
+}
+
+@font-face {
+    font-family: "aus";
+    src: url(res/fonts/austhatic_script/Austhatic\ Script.ttf);
+}
+
+.font1 {
+    font-family: "bit";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font2 {
+    font-family: "int";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font3 {
+    font-family: "kbc";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font4 {
+    font-family: "mak";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font5 {
+    font-family: "pink";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font6 {
+    font-family: "sml";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font7 {
+    font-family: "typ";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font8 {
+    font-family: "unis";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font9 {
+    font-family: "vor";
+    font-size: 45px;
+    /* color: rgb(255, 255, 255);
+    border-radius: 15px;
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
+
+.font10 {
+    font-family: "aus";
+    font-size: 30px;
+    /* color: rgb(255, 255, 255);
+    text-shadow: black 5px 5px 2px;
+    border-radius: 15px; */
+}
